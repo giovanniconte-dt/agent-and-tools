@@ -1,0 +1,7 @@
+langchain>=1.2
+langchain-community
+langchain-ollama
+sqlalchemy
+pyodbc
+python-dotenv
+flask
