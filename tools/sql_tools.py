@@ -36,7 +36,7 @@ def create_sql_tools(connection_string: str) -> list:
         """Execute an UPDATE query on the database. Use this for modifying data.
         Input must be a valid SQL UPDATE statement only. Returns execution result."""
         q = query.strip().upper()
-        allowed = ("UPDATE")
+        allowed = ("UPDATE",)
         if not any(q.startswith(kw) for kw in allowed):
             return "Error: write_sql accepts only UPDATE queries. Use read_sql for SELECT."
         try:

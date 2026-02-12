@@ -5,14 +5,14 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 
-from agent import create_sql_agent
 from config import get_connection_string
+from supervisor_agent import create_supervisor_agent
 
 load_dotenv()
 
 app = Flask(__name__)
 conn_string = get_connection_string()
-agent = create_sql_agent(conn_string)
+agent = create_supervisor_agent(conn_string)
 
 
 def _extract_response_text(result):

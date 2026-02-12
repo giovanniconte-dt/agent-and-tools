@@ -4,7 +4,7 @@ import os
 
 from langchain.agents import create_agent
 
-from tools import create_sql_tools
+from tools.sql_tools import create_sql_tools
 
 SYSTEM_PROMPT = """Sei un assistente esperto di database SQL.
 Hai accesso a due tool:
